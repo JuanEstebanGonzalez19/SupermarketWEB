@@ -1,4 +1,6 @@
-﻿namespace SupermarketWEB.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace SupermarketWEB.Models
 {
     public class Product
     {
