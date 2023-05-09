@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using SupermarketWEB.Data;
 using SupermarketWEB.Models;
@@ -8,6 +9,7 @@ namespace SupermarketWEB.Pages.Categories
     public class CreateModel : PageModel
     {
         private readonly SupermarketContext _context;
+
         public CreateModel(SupermarketContext context)
         {
             _context = context;
@@ -25,6 +27,7 @@ namespace SupermarketWEB.Pages.Categories
             {
                 return Page();
             }
+
             _context.Categories.Add(Category);
             await _context.SaveChangesAsync();
 
