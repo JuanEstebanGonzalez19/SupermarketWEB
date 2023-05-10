@@ -8,6 +8,7 @@ namespace SupermarketWEB.Pages.PayModes
     public class CreateModel : PageModel
     {
         private readonly SupermarketContext _context;
+
         public CreateModel(SupermarketContext context)
         {
             _context = context;
@@ -25,6 +26,7 @@ namespace SupermarketWEB.Pages.PayModes
             {
                 return Page();
             }
+
             _context.PayModes.Add(PayMode);
             await _context.SaveChangesAsync();
 

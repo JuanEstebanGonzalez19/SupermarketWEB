@@ -14,7 +14,9 @@ namespace SupermarketWEB.Pages.Providers
         {
             _context = context;
         }
+
         public IList<Provider> Providers { get; set; } = default!;
+
         public async Task OnGetAsync()
         {
             if (_context.Providers != null)

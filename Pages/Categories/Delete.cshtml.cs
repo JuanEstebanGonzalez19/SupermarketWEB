@@ -9,7 +9,7 @@ namespace SupermarketWEB.Pages.Categories
     public class DeleteModel : PageModel
     {
         private readonly SupermarketContext _context;
-        public DeleteModel(SupermarketContext context) 
+        public DeleteModel(SupermarketContext context)
         {
             _context = context;
         }
@@ -18,17 +18,18 @@ namespace SupermarketWEB.Pages.Categories
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Categories == null) 
-            {
-                return NotFound(); 
-            }
-
-            var category = await _context.Categories.FirstOrDefaultAsync(m => m.Id == id);
-            if (category == null) 
+            if (id == null || _context.Categories == null)
             {
                 return NotFound();
             }
-            else 
+
+            var category = await _context.Categories.FirstOrDefaultAsync(m => m.Id == id);
+
+            if (category == null)
+            {
+                return NotFound();
+            }
+            else
             {
                 Category = category;
             }
@@ -46,7 +47,7 @@ namespace SupermarketWEB.Pages.Categories
             }
             var category = await _context.Categories.FindAsync(id);
 
-            if (category != null) 
+            if (category != null)
             {
                 Category = category;
                 _context.Categories.Remove(Category);

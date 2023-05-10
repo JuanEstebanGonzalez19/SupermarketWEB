@@ -1,7 +1,7 @@
 ﻿@page
 @model SupermarketWEB.Pages.PayModes.IndexModel
 @{
-    ViewData["Title"] = "Index PayModes";
+    ViewData["Title"] = "Index Pay Mode";
 }
 <h1>Index PayModes</h1>
 
@@ -32,10 +32,11 @@
                     @Html.DisplayFor(modelItem => item.Description)
                 </td>
                 <td>
-                    <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-danger">Edit</a>
                     <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                    <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-danger">Edit</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+

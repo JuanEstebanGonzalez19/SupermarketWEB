@@ -1,4 +1,3 @@
-
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using SupermarketWEB.Data;
@@ -14,7 +13,9 @@ namespace SupermarketWEB.Pages.Categories
         {
             _context = context;
         }
+
         public IList<Category> Categories { get; set; } = default!;
+        
         public async Task OnGetAsync() 
         {
             if (_context.Categories != null) 

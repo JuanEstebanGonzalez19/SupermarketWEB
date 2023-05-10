@@ -23,14 +23,15 @@ namespace SupermarketWEB.Pages.Providers
                 return NotFound();
             }
 
-            var provider = await _context.Providers.FirstOrDefaultAsync(m => m.Id == id);
-            if (provider == null)
+            var providers = await _context.Providers.FirstOrDefaultAsync(m => m.Id == id);
+
+            if (providers == null)
             {
                 return NotFound();
             }
             else
             {
-                Provider = provider;
+                Provider = providers;
             }
             return Page();
         }
