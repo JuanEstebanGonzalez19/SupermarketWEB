@@ -1,11 +1,11 @@
 ﻿@page
-@model SupermarketWEB.Pages.ShopSells.CreateCompraModel
+@model SupermarketWEB.Pages.ShopSells.CreateVentaModel
 @{
-    ViewData["Title"] = "Shop liqueur";
+    ViewData["Title"] = "Sell liqueur";
 }
-<h1>Create Shop</h1>
+<h1>Create Sell</h1>
 
-<h4>Shop liqueur</h4>
+<h4>Sell liqueur</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -37,7 +37,7 @@
                 <span asp-validation-for="ShopSell.Description" class="text-danger"></span>
             </div>
             <div class="form-group mt-3">
-                <input type="submit" value="CreateCompra" class="btn btn-success" />
+                <input type="submit" value="CreateVenta" class="btn btn-success" />
                 <a asp-page="Index" class="btn btn-primary">Back to List</a>
             </div>
         </form>
