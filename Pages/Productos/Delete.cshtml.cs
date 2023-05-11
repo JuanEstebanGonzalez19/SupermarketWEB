@@ -56,5 +56,6 @@ namespace SupermarketWEB.Pages.Productos
 
             return RedirectToPage("./Index");
         }
+
     }
 }
