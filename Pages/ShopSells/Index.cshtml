@@ -5,8 +5,8 @@
 }
 <h1>Index Buy and Sell</h1>
 <p>
-    <a asp-page="CreateCompra" class="btn btn-success">BUY</a>
-    <a asp-page="CreateVenta" class="btn btn-success">SELL</a>
+    <a asp-page="CreateCompra" class="btn btn-success">BUY STOCK</a>
+    <a asp-page="CreateVenta" class="btn btn-success">BUY SHOP</a>
 </p>
 
 
@@ -51,7 +51,8 @@
                     @Html.DisplayFor(modelItem => item.Description)
                 </td>
                 <td>
-                    <a asp-page="./DeleteVenta" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                    <a asp-page="./DeleteVenta" asp-route-id="@item.Id" class="btn btn-danger">Sell</a>
+                    <a asp-page="./EditCompra" asp-route-id="@item.Id" class="btn btn-danger">Edit</a>
                 </td>
             </tr>
         }
