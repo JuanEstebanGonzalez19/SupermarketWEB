@@ -4,13 +4,17 @@
     ViewData["Title"] = "Index Shop and Sell";
 }
 <h1>Index Shop and Sell</h1>
-
 <p>
+    <a asp-page="CreateCompra" class="btn btn-success">Shop</a>
 </p>
+
 
 <table class="table">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ShopSells[0].Status)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.ShopSells[0].Name)
             </th>
@@ -30,6 +34,9 @@
         @foreach (var item in Model.ShopSells)
         {
             <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Name)
                 </td>
