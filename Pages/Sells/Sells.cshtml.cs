@@ -31,7 +31,6 @@ namespace SupermarketWEB.Pages.Sells
 
             Productos = await productos.ToListAsync();
 
-
         }
     }
 }

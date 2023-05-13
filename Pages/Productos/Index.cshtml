@@ -4,7 +4,14 @@
     ViewData["Title"] = "Index Products";
 }
 <h1>Index Products</h1>
-
+<p>
+    <form method="get">
+        <div class="form-group">
+            <input type="text" class="form-control" name="searchString" placeholder="Buscar productos">
+        </div>
+        <button type="submit" class="btn btn-primary">Buscar</button>
+    </form>
+</p>
 <p>
     <a asp-page="Create" class="btn btn-success">Create New</a>
     <div>
@@ -18,7 +25,9 @@
                     <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                         <ul class="navbar-nav flex-grow-1 text-center">
                             <li class="nav-item">
-                                <a class="nav-link text-white" asp-area="" asp-page="/Sells/Sells">SELLS</a>
+                                <a class="nav-link text-white" asp-area="" asp-page="/Sells/Sells">
+                                    <img src="~/images/se.jpg" alt="Sample Photo" width="30px" />SELLS
+                                </a>
                             </li>
                         </ul>
                     </div>
