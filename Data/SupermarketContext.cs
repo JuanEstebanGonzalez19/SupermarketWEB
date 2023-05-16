@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SupermarketWEB.Models;
+using SupermarketWEB.ModelsUser;
 
 namespace SupermarketWEB.Data
 {
@@ -14,7 +15,6 @@ namespace SupermarketWEB.Data
         public DbSet<PayMode> PayModes { get; set; }
         public DbSet<Producto> Productos { get; set; }
         public DbSet<ShopSell> ShopSells { get; set; }
-
-
+        public DbSet<User> Account { get; set; }
     }
 }
