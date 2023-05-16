@@ -11,6 +11,5 @@ namespace SupermarketWEB.ModelsUser
         [Required]
         [DataType(DataType.Password)]
         public string Password { get; set; }
-        public ICollection<Product>? Products { get; set; } = default!;
     }
 }

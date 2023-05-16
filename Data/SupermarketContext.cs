@@ -15,6 +15,5 @@ namespace SupermarketWEB.Data
         public DbSet<PayMode> PayModes { get; set; }
         public DbSet<Producto> Productos { get; set; }
         public DbSet<ShopSell> ShopSells { get; set; }
-        public DbSet<User> Account { get; set; }
     }
 }
